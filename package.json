@@ -21,6 +21,7 @@
     "template": "ncc build ./index.ts -w -o dist/index.js"
   },
   "dependencies": {
+    "@tanstack/query-core": "^4.32.1",
     "@tanstack/react-query": "^4.32.1",
     "@tanstack/react-query-devtools": "^4.32.1",
     "@tanstack/react-query-next-experimental": "^5.0.0-alpha.80",
@@ -37,6 +38,8 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "@vercel/ncc": "0.34.0",
     "eslint": "^8.46.0",
     "eslint-config-airbnb": "^19.0.4",
