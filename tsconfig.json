@@ -19,10 +19,15 @@
         "name": "next"
       }
     ],
+    "typeRoots": ["./node_modules/@types", "./src/app/types"],
     "paths": {
       "@/*": ["./src/*"],
       "@components": ["./src/app/components/"],
-      "@components/*": ["./src/app/components/*"]
+      "@components/*": ["./src/app/components/*"],
+      "@utils": ["./src/app/utils/"],
+      "@utils/*": ["./src/app/utils/*"],
+      "@types": ["./src/app/types/"],
+      "@types/*": ["./src/app/types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

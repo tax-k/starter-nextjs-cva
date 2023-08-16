@@ -21,6 +21,9 @@
     "template": "ncc build ./index.ts -w -o dist/index.js"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.32.1",
+    "@tanstack/react-query-devtools": "^4.32.1",
+    "@tanstack/react-query-next-experimental": "^5.0.0-alpha.80",
     "@types/node": "20.4.5",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
@@ -34,9 +37,8 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "prettier": "^3.0.0",
-    "eslint": "^8.46.0",
     "@vercel/ncc": "0.34.0",
+    "eslint": "^8.46.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^13.4.12",
     "eslint-config-prettier": "^8.9.0",
@@ -44,7 +46,8 @@
     "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react": "^7.33.1"
+    "eslint-plugin-react": "^7.33.1",
+    "prettier": "^3.0.0"
   },
   "browserslist": {
     "production": [
