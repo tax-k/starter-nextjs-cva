@@ -1,8 +1,8 @@
+import { dehydrate } from '@tanstack/query-core';
 import getQueryClient from '@/utils/getQueryClient';
 import Hydrate from '@/utils/hydrate.client';
-import { dehydrate } from '@tanstack/query-core';
-import ListUsers from './list-users';
 import { User } from '@types';
+import ListUsers from './list-users';
 
 async function getUsers() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');

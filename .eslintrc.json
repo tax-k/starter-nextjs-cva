@@ -23,6 +23,7 @@
   "rules": {
     "consistent-return": "off",
     "default-param-last": 0,
+    "camelcase": ["error", { "allow": ["[a-z]*(_[a-z]*)"] }],
     "no-unused-vars": "off",
     "no-shadow": "off",
     "no-nested-ternary": "off",
@@ -63,6 +64,7 @@
 
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/button-has-type": "off",
     "react/jsx-props-no-spreading": "off",
     "react/no-unknown-property": ["error", { "ignore": ["css", "tw"] }],
     "react/destructuring-assignment": [0, "always"],
@@ -76,6 +78,15 @@
         "unnamedComponents": "arrow-function"
       }
     ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "labelComponents": ["label"],
+        "labelAttributes": ["htmlFor"],
+        "controlComponents": ["input"]
+      }
+    ],
+
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",

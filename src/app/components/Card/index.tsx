@@ -5,7 +5,6 @@ import { cva, cx } from 'class-variance-authority';
 /**
  * Box
  */
-export type BoxProps = VariantProps<typeof box>;
 export const box = cva(['box', 'box-border'], {
   variants: {
     margin: { 0: 'm-0', 2: 'm-2', 4: 'm-4', 8: 'm-8' },
@@ -16,11 +15,11 @@ export const box = cva(['box', 'box-border'], {
     padding: 0,
   },
 });
+export type BoxProps = VariantProps<typeof box>;
 
 /**
  * Card
  */
-type CardBaseProps = VariantProps<typeof cardBase>;
 const cardBase = cva(['card', 'border-solid', 'border-slate-300', 'rounded'], {
   variants: {
     shadow: {
@@ -30,6 +29,7 @@ const cardBase = cva(['card', 'border-solid', 'border-slate-300', 'rounded'], {
     },
   },
 });
+type CardBaseProps = VariantProps<typeof cardBase>;
 
 export interface CardProps
   extends BoxProps,

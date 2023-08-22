@@ -1,6 +1,7 @@
 'use client';
 
 import { VariantProps, cva } from 'class-variance-authority';
+
 const ButtonVariants = cva(['font-semibold', 'border', 'rounded'], {
   variants: {
     intent: {
@@ -42,12 +43,7 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof ButtonVariants> {}
 
-const Button: React.FC<ButtonProps> = ({
-  className,
-  intent,
-  size,
-  ...props
-}) => {
+const Button = ({ className, intent, size, ...props }: ButtonProps) => {
   return (
     <button
       className={ButtonVariants({

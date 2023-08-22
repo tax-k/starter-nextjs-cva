@@ -1,6 +1,5 @@
-import ListUsers from './list-users';
-
 import { Suspense } from 'react';
+import ListUsers from './list-users';
 
 export default async function Page() {
   return (

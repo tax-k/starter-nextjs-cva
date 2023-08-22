@@ -1,13 +1,14 @@
 'use client';
 
+import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { User } from '@types';
-import React from 'react';
 
 async function fetchUsers() {
-  return await fetch('https://jsonplaceholder.typicode.com/users').then((res) =>
-    res.json(),
+  const res = await fetch('https://jsonplaceholder.typicode.com/users').then(
+    (res) => res.json(),
   );
+  return res;
 }
 
 export default function ListUsers() {
@@ -33,31 +34,29 @@ export default function ListUsers() {
   return (
     <>
       <p>{count}</p>
-      {
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 20,
-          }}
-        >
-          {data?.map((user, idx) => {
-            return (
-              <div
-                key={user.id}
-                style={{ border: '1px solid #ccc', textAlign: 'center' }}
-              >
-                <img
-                  src={`https://robohash.org/${user.id}?set=set2&size=180x180`}
-                  alt={user.name}
-                  style={{ width: 180, height: 180 }}
-                />
-                <h3>{user.name}</h3>
-              </div>
-            );
-          })}
-        </div>
-      }
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: 20,
+        }}
+      >
+        {data?.map((user, _) => {
+          return (
+            <div
+              key={user.id}
+              style={{ border: '1px solid #ccc', textAlign: 'center' }}
+            >
+              <img
+                src={`https://robohash.org/${user.id}?set=set2&size=180x180`}
+                alt={user.name}
+                style={{ width: 180, height: 180 }}
+              />
+              <h3>{user.name}</h3>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }
