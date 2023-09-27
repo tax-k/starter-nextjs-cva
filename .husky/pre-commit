@@ -1,0 +1,11 @@
+# #!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚦 BEFORE COMMIT | prettier checking..."
+yarn prettier . --write
+
+echo "🚦 BEFORE COMMIT | re-add changed file..."
+git add .
+
+echo "🚦 BEFORE COMMIT | build checking..."
+yarn build

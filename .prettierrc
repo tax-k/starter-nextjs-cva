@@ -1,0 +1,19 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "semi": true,
+  "trailingComma": "all",
+  "printWidth": 80,
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": ["src/routes/*.ts"],
+      "options": {
+        "printWidth": 1000
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["cva"]
+}

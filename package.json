@@ -38,9 +38,18 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^11.0.4",
     "@vercel/ncc": "0.34.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.46.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^13.4.12",
@@ -50,7 +59,10 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.1",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "husky": "^8.0.3",
+    "semantic-release": "^21.0.7"
   },
   "browserslist": {
     "production": [
@@ -63,5 +75,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "config": {
+    "cz-customizable": {
+      "config": "cz-config.js"
+    },
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   }
 }
